@@ -1,166 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Anushka Joshi | ESG Consulting - Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nanum+Pen+Script&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --red: #d33f49;
-    --orange: #f07818;
-    --yellow: #f9d71c;
-    --green: #4c9a2a;
-    --blue: #1f4e79;
-    --dark-brown: #3a2f23;
-    --cream: #fff8e7;
-    --tribal-opacity: 0.07;
-  }
-  body {
-    margin: 0;
-    background: var(--cream);
-    font-family: 'Marcellus', serif;
-    color: var(--dark-brown);
-    line-height: 1.6;
-    min-height: 100vh;
-    padding-top: 4.5rem;
-    position: relative;
-    overflow-x: hidden;
-  }
-  nav {
-    background: var(--blue);
-    color: var(--cream);
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
-    position: fixed;
-    top: 0; width: 100%; z-index: 100;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    font-size: 0.85rem;
-  }
-  nav a {
-    color: var(--cream);
-    margin: 0 1.8rem;
-    text-decoration: none;
-    font-family: 'Nanum Pen Script', cursive;
-    transition: color 0.3s ease;
-  }
-  nav a:hover {
-    color: var(--orange);
-  }
-  .container {
-    max-width: 960px;
-    margin: 0 auto 4rem;
-    padding: 0 1rem;
-  }
-  header {
-    text-align: center;
-    margin-bottom: 2rem;
-    animation: fadeInDown 1.5s ease forwards;
-  }
-  header h1 {
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 3rem;
-    color: var(--red);
-    margin-bottom: 0;
-    text-shadow:
-      2px 2px var(--orange),
-      4px 4px var(--yellow);
-  }
-  section {
-    animation: fadeInUp 1.5s ease forwards;
-  }
-  h2 {
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 2.2rem;
-    color: var(--blue);
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  .tribal-border {
-    border: 6px double var(--red);
-    border-radius: 25px;
-    padding: 1.3rem 2rem;
-    margin-bottom: 2rem;
-    background: #fff3cc;
-    box-shadow: 3px 3px var(--dark-brown);
-    font-weight: 500;
-    font-size: 1.15rem;
-  }
-  /* Tribal subtle background circles top-left */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 180px; height: 180px;
-    opacity: var(--tribal-opacity);
-    background: url('assets/tribal_pattern.svg') no-repeat center center;
-    background-size: contain;
-    pointer-events: none;
-    z-index: 0;
-  }
-  footer {
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 2rem 1rem;
-    border-top: 2px solid var(--red);
-    font-family: monospace;
-    color: var(--dark-brown);
-  }
-
-  /* Animations */
-  @keyframes fadeInDown {
-    0% {opacity: 0; transform: translateY(-40px);}
-    100% {opacity: 1; transform: translateY(0);}
-  }
-  @keyframes fadeInUp {
-    0% {opacity: 0; transform: translateY(40px);}
-    100% {opacity: 1; transform: translateY(0);}
-  }
-
-  @media (max-width: 600px) {
-    header h1 {font-size: 2.2rem;}
-    nav {font-size: 0.75rem;}
-    .container {margin: 5rem 1rem 3rem; padding: 1rem;}
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anushka Joshi | ESG Consultant</title>
+    <style>
+        body {
+            background-color: #f0efe7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6e4b3a;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        .intro {
+            padding: 2em;
+            text-align: center;
+        }
+        .projects {
+            background-color: #f8f4e1;
+            padding: 2em;
+        }
+        .projects h2 {
+            text-align: center;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1em;
+        }
+        .project-card {
+            background-color: #fff;
+            border: 2px solid #d1a684;
+            border-radius: 10px;
+            padding: 1em;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .contact {
+            background-color: #6e4b3a;
+            color: #fff;
+            padding: 2em;
+            text-align: center;
+        }
+        .contact a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-<nav aria-label="Primary navigation">
-  <a href="index.html" aria-current="page">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<div class="container">
-  <header>
-    <h1>Anushka Joshi</h1>
-    <p>Your go-to expert for solving ESG problems with passion and precision.</p>
-  </header>
-
-  <section id="about" aria-label="About Anushka Joshi">
-    <div class="tribal-border">
-      <p>Welcome! I’m Anushka Joshi, an experienced ESG consultant blending Bhil and Gond art inspiration with cutting-edge sustainability strategies. I deliver authentic, impactful ESG solutions that honor tradition and innovate for the future.</p>
-    </div>
-  </section>
-
-  <section id="why" aria-label="Why work with Anushka Joshi">
-    <h2>Why Work With Me?</h2>
-    <div class="tribal-border">
-      <ul>
-        <li>Proven track record in ESG project delivery and consulting</li>
-        <li>Deep knowledge of sustainability frameworks and standards</li>
-        <li>Unique blend of cultural artistry with modern environmental science</li>
-        <li>Clear communication, practical solutions, and client-centric approach</li>
-        <li>Passion for social justice and carbon neutrality</li>
-      </ul>
-    </div>
-  </section>
-</div>
-
-<footer>
-  <p>© 2025 Anushka Joshi • ESG Consulting</p>
-</footer>
+    <header>
+        <h1>Anushka Joshi - ESG Wizard</h1>
+        <p>Bringing ESG solutions with a touch of art and a whole lot of impact!</p>
+    </header>
+    <section class="intro">
+        <h2>About Me</h2>
+        <p>I’m Anushka Joshi, your go-to ESG expert blending Bhil and Gond artistry into impactful sustainability solutions. Let’s transform your business with creativity, strategy, and ESG excellence!</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Gond_Painting.jpg" alt="Bhil and Gond art" width="300">
+    </section>
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Carbon Footprint Calculator</h3>
+                <p>Script to calculate Scope 1-3 emissions with Excel templates and validation.</p>
+                <a href="https://github.com/anushka200899/anushka.github.io/blob/main/scripts/emissions_calculator.py" target="_blank">View Script</a>
+            </div>
+            <div class="project-card">
+                <h3>Reduction Opportunity Matrix</h3>
+                <p>Excel templates with potential ESG strategies for emissions reduction.</p>
+                <a href="https://github.com/anushka200899/anushka.github.io/blob/main/sample_files/reduction_opportunity_matrix.xlsx" target="_blank">Download File</a>
+            </div>
+            <div class="project-card">
+                <h3>Data Collection Template</h3>
+                <p>Template Excel for Scope 1-3 emissions data input.</p>
+                <a href="https://github.com/anushka200899/anushka.github.io/blob/main/sample_files/emissions_data_template.xlsx" target="_blank">Download Template</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>Let’s Connect!</h2>
+        <p>Reach out to me for collaborations, ESG consulting, or a casual chat!</p>
+        <p>Email: <a href="mailto:anushka.joshi99@outlook.com">anushka.joshi99@outlook.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/anushka-joshi-851800313" target="_blank">Anushka Joshi</a></p>
+        <p>WhatsApp: <a href="https://wa.me/918989616664" target="_blank">Chat with me</a></p>
+    </section>
 </body>
 </html>
